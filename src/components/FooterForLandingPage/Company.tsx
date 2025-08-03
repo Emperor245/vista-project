@@ -6,6 +6,7 @@ import { RiFacebookCircleFill } from "react-icons/ri";
 import { FaPinterest } from "react-icons/fa";
 import { IoMdMail } from "react-icons/io";
 import { FaTwitter } from "react-icons/fa";
+import Image from 'next/image';
 const linksData = [
     {
         id:1,
@@ -39,10 +40,15 @@ const Company = () => {
         <h1 className='font-semibold text-footerTextOne'>COMPANY</h1>
               <div className='my-4'>
     <Link href={"/"} className='flex items-center '>
-    < GiConcentricCrescents className='text-primary' size={43}/>
+       <div className='w-[120px] h-[50px] relative'>
+         <Image 
+         className='absolute w-full h-full object-contain'
+         src={"/logo.png"} alt='logo' fill/>
+       </div>
+    {/* < GiConcentricCrescents className='text-primary' size={43}/>
         <span className='text-primary mdsm:text-[0.73rem] font-semibold text-[0.8rem]'>RealVista  Shares 
             <br />
-            Limited</span>
+            Limited</span> */}
     </Link>
       </div>
       <p className='text-[0.7rem]'>

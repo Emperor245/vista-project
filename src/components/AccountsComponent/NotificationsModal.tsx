@@ -47,7 +47,7 @@ console.log([...userState.deposit,...userState.bonus,...userState.bonus,...userS
 
         return <button
         onClick={()=> setCurrentBtn(item)}
-        className={`cursor-pointer  py-2 px-4 rounded-md capitalize ${currentBtn === item ?"bg-primary":"bg-gray-200"}`} key={index}>
+        className={`cursor-pointer  py-2 px-4 rounded-md capitalize ${currentBtn === item ?"bg-primary text-white font-medium":"bg-gray-200"}`} key={index}>
 {item}
         </button>
     })}

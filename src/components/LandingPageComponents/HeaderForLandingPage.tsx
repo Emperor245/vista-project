@@ -13,6 +13,7 @@ import Link from 'next/link';
 import gsap from 'gsap';
 import Dropdown from './ChangeLanguageDropDown';
 import Flag from 'react-world-flags';
+import Image from 'next/image';
 
 const languages = [
   { code: 'en', label: 'English', flag: 'us' },
@@ -57,10 +58,15 @@ else{
     <div className='flex items-center justify-between py-4  mx-4'>
       <div className='lg:w-[20%]'>
     <Link href={"/"} className='flex items-center '>
-    < GiConcentricCrescents className='text-primary' size={43}/>
+   <div className='w-[120px] h-[50px] relative'>
+     <Image 
+     className='absolute w-full h-full object-contain'
+     src={"/logo.png"} alt='logo' fill/>
+   </div>
+    {/* < GiConcentricCrescents className='text-primary' size={43}/>
         <span className='text-primary mdsm:text-[0.73rem] font-semibold text-[0.8rem]'>RealVista  Shares 
             <br />
-            Limited</span>
+            Limited</span> */}
     </Link>
       </div>
 
