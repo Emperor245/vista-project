@@ -2,10 +2,12 @@
 import React, { useEffect, useRef } from 'react'
 import Image from 'next/image'
 import gsap from 'gsap'
+import { useRouter } from 'next/navigation'
 export const HeroSectionForLandingPage = () => {
 const headerRef = useRef<HTMLHeadingElement | null>(null)
 const paraRef = useRef<HTMLParagraphElement | null>(null)
 
+const router = useRouter()
   useEffect(()=>{
 
     // for header
@@ -45,7 +47,7 @@ Secure Your Future
 
 </p>
 
-<button className='rounded-full w-[120px] text-center py-[10px] bg-primary text-white '>
+<button onClick={()=> router.push("/sign-in")} className='rounded-full w-[120px] text-center py-[10px] bg-primary text-white '>
 Get Started
 </button>
   </div>
