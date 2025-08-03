@@ -24,7 +24,11 @@ const dispatch = useDispatch<appDispatch>()
     return store.userReducer
       })
 
-  const totalBalance:number = userState.investment.reduce((acc:number,curr:any)=> Number(acc) + Number(curr.profitReturn) , 0) + userState.bonus.reduce((acc:number,curr:any)=> Number(acc) + Number(curr.amount) , 0) + userState.deposit.reduce((acc:number,curr:any)=> Number(acc) + Number(curr.amount) , 0)
+ const totalBalance:number = userState.investment.reduce((acc:number,curr:any)=> {
+        if (curr.confirmed == "no") {
+          return Number(acc) + Number(curr.amount)
+        }
+       return Number(acc) + Number(curr.profitReturn)} , 0) + userState.bonus.reduce((acc:number,curr:any)=> Number(acc) + Number(curr.amount) , 0) + userState.deposit.reduce((acc:number,curr:any)=> Number(acc) + Number(curr.amount) , 0) - userState.withdrawal.reduce((acc:number,curr:any)=> Number(acc) + Number(curr.amount) , 0)
   
 const handleSubmit = async(e: React.FormEvent) => {
     e.preventDefault();
