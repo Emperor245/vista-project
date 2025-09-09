@@ -18,6 +18,7 @@ import { addUserInfo } from "@/store/slices/userSlice";
 export default function Home() {
 
   // const dispatch = useDispatch<appDispatch>()
+console.log("yeap");
 
   // useEffect(()=>{
   //   dispatch(addUserInfo(JSON.parse(localStorage.getItem("user") as string)))
