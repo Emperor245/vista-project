@@ -175,7 +175,7 @@ console.log(formDetails);
     name='password'
         onChange={(e:React.ChangeEvent<HTMLInputElement>)=> {
 
-        setFormDetails({...formDetails,[e.target.name]:e.target.value.toLocaleLowerCase().trim()})
+        setFormDetails({...formDetails,[e.target.name]:e.target.value})
     }}
    
     type={showPassword.password ? "text" : "password"} />
